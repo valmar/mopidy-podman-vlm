@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>Mopidy</short>
+  <description>Extensible Music Server.</description>
+  <port protocol="tcp" port="6600"/>
+  <port protocol="tcp" port="6680"/>
+  <port protocol="udp" port="5555"/>
+</service>
