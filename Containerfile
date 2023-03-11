@@ -28,6 +28,7 @@ RUN set -ex \
  && pip install \
         Mopidy-Iris \
         Mopidy-Mpd \
+        Mopidy-Tidal \
         pyopenssl \
  && mkdir -p /var/lib/mopidy/.config \
  && ln -s /config /var/lib/mopidy/.config/mopidy \
@@ -40,9 +41,6 @@ RUN set -ex \
 
 # Start helper script.
 COPY entrypoint.sh /entrypoint.sh
-
-# Default configuration.
-COPY mopidy.conf /config/mopidy.conf
 
 # Copy the pulse-client configuratrion.
 COPY pulse-client.conf /etc/pulse/client.conf
